@@ -145,19 +145,19 @@ print("\n--- DEVICES NEEDING ATTENTION ---")
 def check_device(device):
 
     if device["cpu_usage"] > 75:
-        print(f"Check {device['hostname']}: High CPU")
+        print(f"Check {device['hostname']}: High CPU!")
 
     if device["memory_usage"] > 80:
-        print(f"Check {device['hostname']}: High memory")
+        print(f"Check {device['hostname']}: High memory!")
 
     if device["backup_status"] == "failed":
-        print(f"Check {device['hostname']}: Backup failed")
+        print(f"Check {device['hostname']}: Backup failed!")
 
     if device["uptime"] < 7:
-        print(f"Check {device['hostname']}: Low uptime")
+        print(f"Check {device['hostname']}: Low uptime!")
 
     if device["status"] == "down":
-        print(f"Check {device['hostname']}: Device is down")
+        print(f"Check {device['hostname']}: Device is down!")
 
 for device in network_inventory:
     check_device(device)
